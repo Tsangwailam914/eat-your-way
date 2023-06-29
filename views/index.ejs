@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Your Way</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Weekly Meal</h1>
+    <div class="weekly-meal">
+        <div class="day">
+            <h2>Monday</h2>
+            <div class="breakfast">
+                <h3>Breakfast</h3>
+                <% monBreakfast.forEach(el=> {%>
+                    <div>
+                        <h4>
+                            <%= el.mealName %><img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
+                        </h4>
+                        <ul>
+                            <% el.ingredients.forEach(el=> {%>
+                                <li>
+                                    <%= el.ingredient %>
+                                </li>
+                                <%})%>
+                        </ul>
+                    </div>
+                    <% }) %>
+                        <form action="/monBreakfast" method="POST">
+                            <input type="text" placeholder="Add your breakfast" autocomplete="off" name="monBreakfast">
+                            <div class="ingredients">
+                                <div class="ingredient">
+                                    <input type="text" placeholder="Ingredient" autocomplete="off" name="monIngredient">
+                                    <label for="ingredient1"><input type="checkbox" name="toBuy"></label>
+                                </div>
+                            </div>
+                            <button type="button" class="more-ingredients-btn">More Ingredients</button>
+                            <button type="submit" class="meal-add-btn">Add</button>
+                        </form>
+            </div>
+            <div class="lunch">
+                <h3>Lunch</h3>
+            </div>
+            <div class="Dinner">
+                <h3>Dinner</h3>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
+html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(65deg, #fac71f 50%, #ffffff 50%);
+    min-height: 1000px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.weekly-meal {
+    display: flex;
+    color: #404040;
+}
+
+.breakfast {
+   margin-top: 18px;
+}
+
+.lunch {
+    margin: 20px 0;
+}
+
+.day {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #404040;
+
+    h2 {
+        text-align: center;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+    }
+    h3 {
+        margin-bottom: 10px;
+    }
+    h4 {
+        display: flex;
+        align-items: center;
+        img {
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
+    ul {
+        padding-left: 20px
+    }
+}
+
+.ingredients-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-del-btn {
+    width: 20px;
+}
+
+.more-ingredients-btn {
+    background-color: white;
+    color: #fac71f;
+    border: 2px solid #fac71f;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+    &:hover {
+        background-color: #fac71f;
+        color: white;
+    }
+}
+
+.meal-add-btn {
+    background-color: #fac71f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+input[type="text"] {
+    border: none;
+    height: 30px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-family: 'Montserrat';
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #fac71f;
+  }
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
