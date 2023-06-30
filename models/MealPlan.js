@@ -6,11 +6,7 @@ const MealPlanSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  ingredients: [
-    {
-      ingredient: String,
-    }
-  ],
+  ingredients: [],
 })
 
 module.exports = mongoose.model('MealPlan', MealPlanSchema)

@@ -16,26 +16,26 @@
             <h2>Monday</h2>
             <div class="breakfast">
                 <h3>Breakfast</h3>
-                <% monBreakfast.forEach(el=> {%>
+                <% breakfast.forEach(el=> {%>
                     <div data-id="<%=el._id%>" class="breakfast">
                         <h4>
                             <%= el.mealName %>
                                 <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
                         </h4>
                         <ul>
-                            <% el.ingredients.forEach(el=> {%>
+                            <% el.ingredients.forEach(ingredient=> {%>
                                 <li>
-                                    <%= el.ingredient %>
+                                    <%= ingredient %>
                                 </li>
                             <%})%>
                         </ul>
                     </div>
                 <% }) %>
                         <form action="/monBreakfast" method="POST">
-                            <input type="text" placeholder="Add your breakfast" autocomplete="off" name="monBreakfast">
+                            <input type="text" placeholder="Add your breakfast" autocomplete="off" name="breakfast">
                             <div class="ingredients">
                                 <div class="ingredient">
-                                    <input type="text" placeholder="Ingredient" autocomplete="off" name="monIngredient">
+                                    <input type="text" placeholder="Ingredient" autocomplete="off" name="ingredient">
                                 </div>
                             </div>
                             <button type="button" class="more-ingredients-btn">More Ingredients</button>
@@ -51,9 +51,9 @@
                             <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
                         </h4>
                         <ul>
-                            <% el.ingredients.forEach(el => {%>
+                            <% el.ingredients.forEach(ingredient => {%>
                                 <li>
-                                    <%= el.ingredient %>
+                                    <%= ingredient %>
                                 </li>
                             <%})%>
                         </ul>
@@ -63,7 +63,7 @@
                     <input type="text" placeholder="Add your lunch" autocomplete="off" name="lunch">
                     <div class="ingredients">
                         <div class="ingredient">
-                            <input type="text" placeholder="Ingredient" autocomplete="off" name="monIngredient">
+                            <input type="text" placeholder="Ingredient" autocomplete="off" name="ingredient">
                         </div>
                     </div>
                     <button type="button" class="more-ingredients-btn">More Ingredients</button>
@@ -79,9 +79,9 @@
                             <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
                         </h4>
                         <ul>
-                            <% el.ingredients.forEach(el => {%>
+                            <% el.ingredients.forEach(ingredient => {%>
                                 <li>
-                                    <%= el.ingredient %>
+                                    <%= ingredient %>
                                 </li>
                             <%})%>
                         </ul>
@@ -91,7 +91,7 @@
                     <input type="text" placeholder="Add your dinner" autocomplete="off" name="dinner">
                     <div class="ingredients">
                         <div class="ingredient">
-                            <input type="text" placeholder="Ingredient" autocomplete="off" name="monIngredient">
+                            <input type="text" placeholder="Ingredient" autocomplete="off" name="ingredient">
                         </div>
                     </div>
                     <button type="button" class="more-ingredients-btn">More Ingredients</button>

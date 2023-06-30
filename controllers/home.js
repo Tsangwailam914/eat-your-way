@@ -3,10 +3,10 @@ const MealPlan = require('../models/MealPlan')
 module.exports = {
     getMonMeal: async (req, res) => {
         try {
-            const monBreakfast = await MealPlan.find({meal:"Breakfast"})
+            const breakfast = await MealPlan.find({meal:"Breakfast"})
             const lunch = await MealPlan.find({meal:"Lunch"})
             const dinner = await MealPlan.find({meal:"Dinner"})
-            res.render('index.ejs', { monBreakfast: monBreakfast, lunch: lunch, dinner:dinner })
+            res.render('index.ejs', { breakfast: breakfast, lunch: lunch, dinner:dinner })
         }
         catch (err) {
             console.log(err)
@@ -14,16 +14,10 @@ module.exports = {
     },
     createMonBreakfast: async (req, res) => {
         try {
-            let ingredients = [];
-            req.body.monIngredient.forEach((ingredient, i) => {
-                ingredients[i] = {
-                    ingredient: ingredient
-                }
-            })
             await MealPlan.create({
                 meal: "Breakfast",
-                mealName: req.body.monBreakfast,
-                ingredients: ingredients
+                mealName: req.body.breakfast,
+                ingredients: req.body.ingredient
             })
             res.redirect('/')
         }
@@ -33,16 +27,10 @@ module.exports = {
     },
     createLunch: async (req,res) => {
         try {
-            let ingredients = [];
-            req.body.monIngredient.forEach((ingredient, i) => {
-                ingredients[i] = {
-                    ingredient: ingredient
-                }
-            })
             await MealPlan.create({
                 meal: "Lunch",
                 mealName: req.body.lunch,
-                ingredients: ingredients
+                ingredients: req.body.ingredient
             })
             res.redirect('/')
         }
@@ -52,16 +40,10 @@ module.exports = {
     },
     createDinner: async (req,res) => {
         try {
-            let ingredients = [];
-            req.body.monIngredient.forEach((ingredient, i) => {
-                ingredients[i] = {
-                    ingredient: ingredient
-                }
-            })
             await MealPlan.create({
                 meal: "Dinner",
                 mealName: req.body.dinner,
-                ingredients: ingredients
+                ingredients: req.body.ingredient
             })
             res.redirect('/')
         }
