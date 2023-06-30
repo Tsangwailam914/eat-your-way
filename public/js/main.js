@@ -1,4 +1,4 @@
-const deleteBtn = document.querySelectorAll('.del')
+const deleteBtn = document.querySelectorAll('.meal-del-btn')
 const todoItem = document.querySelectorAll('span.not')
 const todoComplete = document.querySelectorAll('span.completed')
 const addIngredients = document.querySelectorAll('.more-ingredients-btn')
@@ -23,7 +23,6 @@ function moreIngredients(evt) {
     const ingredients = this.previousSibling.previousElementSibling
     const ingredient = document.createElement('div')
     const ingredientInput = document.createElement('input')
-    const toBuyCheckbox = document.createElement('input')
 
     ingredient.classList.add("ingredient")
 
@@ -32,23 +31,19 @@ function moreIngredients(evt) {
     ingredientInput.setAttribute('autocomplete', 'off')
     ingredientInput.setAttribute('name','monIngredient')
 
-    toBuyCheckbox.setAttribute('type','checkbox')
-    toBuyCheckbox.setAttribute('name','toBuy')
-
     ingredient.appendChild(ingredientInput)
-    ingredient.appendChild(toBuyCheckbox)
 
     ingredients.appendChild(ingredient)
 }
 
 async function deleteTodo(){
-    const todoId = this.parentNode.dataset.id
+    const mealId= this.parentNode.parentNode.dataset.id
     try{
-        const response = await fetch('todos/deleteTodo', {
+        const response = await fetch('/deleteMeal', {
             method: 'delete',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
-                'todoIdFromJSFile': todoId
+                'mealIdFromJSFile': mealId
             })
         })
         const data = await response.json()

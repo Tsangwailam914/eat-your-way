@@ -17,25 +17,25 @@
             <div class="breakfast">
                 <h3>Breakfast</h3>
                 <% monBreakfast.forEach(el=> {%>
-                    <div>
+                    <div data-id="<%=el._id%>" class="breakfast">
                         <h4>
-                            <%= el.mealName %><img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
+                            <%= el.mealName %>
+                                <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
                         </h4>
                         <ul>
                             <% el.ingredients.forEach(el=> {%>
                                 <li>
                                     <%= el.ingredient %>
                                 </li>
-                                <%})%>
+                            <%})%>
                         </ul>
                     </div>
-                    <% }) %>
+                <% }) %>
                         <form action="/monBreakfast" method="POST">
                             <input type="text" placeholder="Add your breakfast" autocomplete="off" name="monBreakfast">
                             <div class="ingredients">
                                 <div class="ingredient">
                                     <input type="text" placeholder="Ingredient" autocomplete="off" name="monIngredient">
-                                    <label for="ingredient1"><input type="checkbox" name="toBuy"></label>
                                 </div>
                             </div>
                             <button type="button" class="more-ingredients-btn">More Ingredients</button>
@@ -44,9 +44,59 @@
             </div>
             <div class="lunch">
                 <h3>Lunch</h3>
+                <% lunch.forEach(el => {%>
+                    <div data-id="<%=el._id%>" class="lunch">
+                        <h4>
+                            <%= el.mealName %>
+                            <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
+                        </h4>
+                        <ul>
+                            <% el.ingredients.forEach(el => {%>
+                                <li>
+                                    <%= el.ingredient %>
+                                </li>
+                            <%})%>
+                        </ul>
+                    </div>
+                <% }) %>
+                <form action="/lunch" method="POST">
+                    <input type="text" placeholder="Add your lunch" autocomplete="off" name="lunch">
+                    <div class="ingredients">
+                        <div class="ingredient">
+                            <input type="text" placeholder="Ingredient" autocomplete="off" name="monIngredient">
+                        </div>
+                    </div>
+                    <button type="button" class="more-ingredients-btn">More Ingredients</button>
+                    <button type="submit" class="meal-add-btn">Add</button>
+                </form>
             </div>
             <div class="Dinner">
                 <h3>Dinner</h3>
+                <% dinner.forEach(el => {%>
+                    <div data-id="<%=el._id%>" class="lunch">
+                        <h4>
+                            <%= el.mealName %>
+                            <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
+                        </h4>
+                        <ul>
+                            <% el.ingredients.forEach(el => {%>
+                                <li>
+                                    <%= el.ingredient %>
+                                </li>
+                            <%})%>
+                        </ul>
+                    </div>
+                <% }) %>
+                <form action="/dinner" method="POST">
+                    <input type="text" placeholder="Add your dinner" autocomplete="off" name="dinner">
+                    <div class="ingredients">
+                        <div class="ingredient">
+                            <input type="text" placeholder="Ingredient" autocomplete="off" name="monIngredient">
+                        </div>
+                    </div>
+                    <button type="button" class="more-ingredients-btn">More Ingredients</button>
+                    <button type="submit" class="meal-add-btn">Add</button>
+                </form>
             </div>
         </div>
     </div>

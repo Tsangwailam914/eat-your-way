@@ -1,10 +1,7 @@
 const mongoose = require('mongoose')
 
 const MealPlanSchema = new mongoose.Schema({
-  day: {
-    type: String,
-    required: true
-  },
+  meal: String,
   mealName: {
     type: String,
     required: true,
@@ -12,7 +9,6 @@ const MealPlanSchema = new mongoose.Schema({
   ingredients: [
     {
       ingredient: String,
-      toBuy: Boolean
     }
   ],
 })
