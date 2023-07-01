@@ -10,7 +10,14 @@
 </head>
 
 <body>
-    <h1>Weekly Meal</h1>
+    <div class="header">
+        <a href="/shoppingList" class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path d="M480-160 160-480l320-320 42 42-248 248h526v60H274l248 248-42 42Z"></path>
+            </svg>
+        </a>
+        <h1>Weekly Meal</h1>
+    </div>
     <div class="weekly-meal">
         <div class="day">
             <h2>Monday</h2>
@@ -27,10 +34,10 @@
                                 <li>
                                     <%= ingredient %>
                                 </li>
-                            <%})%>
+                                <%})%>
                         </ul>
                     </div>
-                <% }) %>
+                    <% }) %>
                         <form action="/monBreakfast" method="POST">
                             <input type="text" placeholder="Add your breakfast" autocomplete="off" name="breakfast">
                             <div class="ingredients">
@@ -44,59 +51,59 @@
             </div>
             <div class="lunch">
                 <h3>Lunch</h3>
-                <% lunch.forEach(el => {%>
+                <% lunch.forEach(el=> {%>
                     <div data-id="<%=el._id%>" class="lunch">
                         <h4>
                             <%= el.mealName %>
-                            <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
+                                <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
                         </h4>
                         <ul>
-                            <% el.ingredients.forEach(ingredient => {%>
+                            <% el.ingredients.forEach(ingredient=> {%>
                                 <li>
                                     <%= ingredient %>
                                 </li>
-                            <%})%>
+                                <%})%>
                         </ul>
                     </div>
-                <% }) %>
-                <form action="/lunch" method="POST">
-                    <input type="text" placeholder="Add your lunch" autocomplete="off" name="lunch">
-                    <div class="ingredients">
-                        <div class="ingredient">
-                            <input type="text" placeholder="Ingredient" autocomplete="off" name="ingredient">
-                        </div>
-                    </div>
-                    <button type="button" class="more-ingredients-btn">More Ingredients</button>
-                    <button type="submit" class="meal-add-btn">Add</button>
-                </form>
+                    <% }) %>
+                        <form action="/lunch" method="POST">
+                            <input type="text" placeholder="Add your lunch" autocomplete="off" name="lunch">
+                            <div class="ingredients">
+                                <div class="ingredient">
+                                    <input type="text" placeholder="Ingredient" autocomplete="off" name="ingredient">
+                                </div>
+                            </div>
+                            <button type="button" class="more-ingredients-btn">More Ingredients</button>
+                            <button type="submit" class="meal-add-btn">Add</button>
+                        </form>
             </div>
             <div class="Dinner">
                 <h3>Dinner</h3>
-                <% dinner.forEach(el => {%>
+                <% dinner.forEach(el=> {%>
                     <div data-id="<%=el._id%>" class="lunch">
                         <h4>
                             <%= el.mealName %>
-                            <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
+                                <img src="assets/icons/delete.svg" alt="" class="meal-del-btn">
                         </h4>
                         <ul>
-                            <% el.ingredients.forEach(ingredient => {%>
+                            <% el.ingredients.forEach(ingredient=> {%>
                                 <li>
                                     <%= ingredient %>
                                 </li>
-                            <%})%>
+                                <%})%>
                         </ul>
                     </div>
-                <% }) %>
-                <form action="/dinner" method="POST">
-                    <input type="text" placeholder="Add your dinner" autocomplete="off" name="dinner">
-                    <div class="ingredients">
-                        <div class="ingredient">
-                            <input type="text" placeholder="Ingredient" autocomplete="off" name="ingredient">
-                        </div>
-                    </div>
-                    <button type="button" class="more-ingredients-btn">More Ingredients</button>
-                    <button type="submit" class="meal-add-btn">Add</button>
-                </form>
+                    <% }) %>
+                        <form action="/dinner" method="POST">
+                            <input type="text" placeholder="Add your dinner" autocomplete="off" name="dinner">
+                            <div class="ingredients">
+                                <div class="ingredient">
+                                    <input type="text" placeholder="Ingredient" autocomplete="off" name="ingredient">
+                                </div>
+                            </div>
+                            <button type="button" class="more-ingredients-btn">More Ingredients</button>
+                            <button type="submit" class="meal-add-btn">Add</button>
+                        </form>
             </div>
         </div>
     </div>

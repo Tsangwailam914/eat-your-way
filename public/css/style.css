@@ -121,4 +121,86 @@ input[type=text]:focus {
 
 input[type=checkbox] {
   cursor: pointer;
+}
+
+.back-btn {
+  border: 2px solid #fac71f;
+  border-radius: 50%;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  align-items: center;
+  justify-content: center;
+}
+.back-btn:hover {
+  background-color: #fac71f;
+}
+.back-btn:hover svg path {
+  fill: #ffffff;
+}
+.back-btn svg {
+  width: 30px;
+}
+.back-btn svg path {
+  fill: #fac71f;
+}
+
+.shoppingList-container {
+  display: flex;
+  justify-content: center;
+}
+
+.shoppingList {
+  padding: 40px 20px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.shoppingList form {
+  padding-top: 20px;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.list-header span {
+  margin-left: 16px;
+  font-size: 1.5rem;
+  color: #808080;
+  font-weight: 700;
+}
+
+.add-item-btn {
+  color: white;
+  background-color: #fac71f;
+  font-size: 24px;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+
+.shoppingItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+.shoppingItem span {
+  color: #404040;
+  cursor: pointer;
+}
+.shoppingItem span.completed {
+  text-decoration: line-through;
+}
+.shoppingItem .item-del-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.shoppingItem .item-del-btn img {
+  width: 20px;
 }/*# sourceMappingURL=style.css.map */

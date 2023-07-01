@@ -2,12 +2,13 @@
     font-family: 'Montserrat';
     src: url(../assets/fonts/Montserrat-VariableFont_wght.ttf);
 }
+
 html {
     background-color: #E4E9FD;
     background-image: -webkit-linear-gradient(65deg, #fac71f 50%, #ffffff 50%);
     min-height: 1000px;
     font-family: 'Montserrat', sans-serif;
-  }
+}
 
 h1,
 h2,
@@ -29,7 +30,7 @@ h1 {
 }
 
 .breakfast {
-   margin-top: 18px;
+    margin-top: 18px;
 }
 
 .lunch {
@@ -51,18 +52,22 @@ h1 {
         transform: translateX(-50%);
         background-color: white;
     }
+
     h3 {
         margin-bottom: 10px;
         color: #fac71f;
     }
+
     h4 {
         display: flex;
         align-items: center;
+
         img {
             margin-left: 5px;
             cursor: pointer;
         }
     }
+
     ul {
         padding-left: 20px
     }
@@ -88,6 +93,7 @@ h1 {
     padding: 5px;
     cursor: pointer;
     margin-top: 8px;
+
     &:hover {
         background-color: #fac71f;
         color: white;
@@ -118,8 +124,102 @@ input[type="text"] {
 input[type="text"]:focus {
     outline: none;
     box-shadow: inset 0 -3px 0 0 #fac71f;
-  }
+}
 
 input[type="checkbox"] {
     cursor: pointer;
+}
+
+.back-btn {
+    border: 2px solid #fac71f;
+    border-radius: 50%;
+    display: flex;
+    width: 36px;
+    height: 36px;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #fac71f;
+    }
+
+    &:hover {
+        svg path {
+            fill: #ffffff;
+        }
+    }
+
+    svg {
+        width: 30px;
+
+        path {
+            fill: #fac71f;
+        }
+    }
+}
+
+// shoppingList page
+.shoppingList-container {
+    display: flex;
+    justify-content: center;
+}
+
+.shoppingList {
+    padding: 40px 20px;
+    border: 1px solid;
+    border-radius: 5px;
+
+    form {
+        padding-top: 20px;
+    }
+}
+
+.list-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    span {
+        margin-left: 16px;
+        font-size: 1.5rem;
+        color: #808080;
+        font-weight: 700;
+    }
+}
+
+.add-item-btn {
+    color: white;
+    background-color: #fac71f;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+.shoppingItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d3;
+
+    span {
+        color: #404040;
+        cursor: pointer;
+    }
+    span.completed {
+        text-decoration: line-through;
+    }
+
+    .item-del-btn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+
+        img {
+            width: 20px;
+        }
+    }
 }

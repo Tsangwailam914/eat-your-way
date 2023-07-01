@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eat Your Way</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="#" class="back-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                <path d="M480-160 160-480l320-320 42 42-248 248h526v60H274l248 248-42 42Z"></path>
+            </svg>
+        </a>
+    </div>
+    <div class="shoppingList-container">
+        <div class="shoppingList">
+            <div class="list-header">
+                <h2>Shopping List</h2>
+                <span>
+                    <%= left %>
+                </span>
+            </div>
+            <% shoppingList.forEach(el=> { %>
+                <div data-id="<%= el._id%>" class="shoppingItem">
+                    <span class="<%= el.completed === true ? 'completed' : 'not'%> ">
+                        <%=el.shoppingItem%>
+                    </span>
+                    <button class="item-del-btn">
+                        <img src="assets/icons/delete.svg" alt="">
+                    </button>
+                </div>
+                <% }) %>
+                    <form action="/shoppingList/createList" method="POST">
+                        <input type="text" placeholder="To Buy Item" name="shoppingItem">
+                        <button type="submit" class="add-item-btn">+</button>
+                    </form>
+        </div>
+    </div>
+    <script src="js/shoppingList.js"></script>
+</body>
+
+</html>
