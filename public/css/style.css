@@ -203,4 +203,44 @@ input[type=checkbox] {
 }
 .shoppingItem .item-del-btn img {
   width: 20px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 30px;
+}
+@media screen and (max-width: 756px) {
+  .navigation {
+    flex-direction: column;
+  }
+}
+.navigation .nav-btn {
+  display: block;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: 700;
+  gap: 20px;
+  padding: 16px 12px;
+  background-color: white;
+  text-decoration: none;
+  color: #404040;
+  width: 250px;
+  height: 250px;
+}
+.navigation .nav-btn:hover {
+  transform: scale(1.1);
+  transition-duration: 300ms;
+}
+.navigation .nav-btn span {
+  text-align: center;
+}
+.navigation .nav-btn img {
+  max-width: 250px;
 }/*# sourceMappingURL=style.css.map */

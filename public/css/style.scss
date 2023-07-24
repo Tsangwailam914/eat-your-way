@@ -223,3 +223,46 @@ input[type="checkbox"] {
         }
     }
 }
+
+// home page
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 30px;
+
+    @media screen and (max-width: 756px) {
+        flex-direction: column;
+    }
+    .nav-btn {
+        display: block;
+        border: 1px solid;
+        border-radius: 10px;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-weight: 700;
+        gap: 20px;
+        padding: 16px 12px;
+        background-color: white;
+        text-decoration: none;
+        color: #404040;
+        width: 250px;
+        height: 250px;
+
+        &:hover {
+            transform: scale(1.1);
+            transition-duration: 300ms;
+        }
+
+        span {
+            text-align: center;
+        }
+
+        img {
+            max-width: 250px;
+        }
+    }
+}
