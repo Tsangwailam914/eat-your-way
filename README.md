@@ -1,9 +1,10 @@
 # Eat Your Way
 Eat Your Way is a web application for you to plan your meal and customize your own shopping list.
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
 
-![alt tag](http://placecorgi.com/1200/650)
+<img width="1016" alt="eat-your-way-1" src="https://github.com/Tsangwailam914/eat-your-way/assets/131461078/05c72e80-b95f-4e67-b88f-bbe385438885">
+<img width="729" alt="eat-your-way-2" src="https://github.com/Tsangwailam914/eat-your-way/assets/131461078/b0ae5059-842a-417e-b9b9-54879d906682">
+
 
 ## How It's Made:
 
